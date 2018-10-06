@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://up.blackboard.com/bbcswebdav/pid-1297196-dt-content-rid-13603222_1/courses/218946/login%282%29.html -->
+<html>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">  
+  <title>Integração Sistemas</title>
+
+  <style>
+    body{      
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #login-box {
+      background-color:#547d54;
+      width:380px;
+      height:700px;
+      margin:140px auto 0px;
+      border-radius:5px;
+    }
+    #login-box-interno {
+      width: 360px;
+      height:700px;
+      background-color:white;
+      position:absolute;
+      margin:10px;
+      border-radius:5px;
+      box-shadow:0px 0px 5px black;
+      overflow:hidden;
+    }
+    #login-box-label {
+      height:45px;
+      text-align:center;
+      font:bold 14px/45px sans-serif;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      border-bottom:1px solid #bfc3c5;
+      box-shadow:1px 0px 3px black;
+      color:#555555;
+      text-shadow:1px 0px 1px white;
+    }
+    .input-div {
+      margin:20px;
+      padding:5px;
+      background-color:#f2f5f7;
+      border-radius:3px;
+    }
+    .input-div input {
+      width:302px;
+      height:35px;
+      padding-left:5px;
+      font:normal 13px sans-serif;
+      color:#aeaeae;
+      border-radius:3px;
+      border:1px solid #bfc4c6;
+      outline:none;
+    }
+    .input-div:hover {
+      background-color:#e0f1fc;
+    }
+    .input-div:hover input {
+      border-color:#7dc6dd;
+    }
+    #input-senha {
+      margin-top:-10px;
+    }
+    #botoes {
+      width:310px;
+      margin-left:25px;
+    }
+    #botao {
+      float:right;
+      background-color:#aeae;
+      padding:5px 15px;
+      font:bold 12px sans-serif;
+      border-radius:20px;
+      text-shadow:0px 1px white;
+      border:1px solid #9eb9c3;
+      color:#527988;
+      box-shadow:0px 0px 10px #c9c9c9;
+    }
+    #botao:hover {
+      background-color:#e0f1fc;
+      cursor:pointer;
+    }
+    #lembrar-senha {
+      font:normal 12px sans-serif;
+    }
+    #recupera-senha {
+      text-align:center;
+      font: 14px/45px sans-serif;
+      color:#669999;
+      /*text-shadow:1px 0px 1px white;*/
+    }
+    /*barra de navegação*/
+    #barraMenu {
+      background-color:#1992b7;
+      width:100%;
+      height:44px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0px;
+      filter:alpha(opacity=50);
+      opacity:0.6;
+      /*padding: -10px -10px 0px -10px;*/
+    }
+    #barraMenu:hover {
+      filter:alpha(opacity=100);
+      opacity:0.8;
+    }
+    #menu {
+       background-color:#006633;
+       padding: 0px;
+    }
+    #menu ul {
+      text-align:left;
+      /*padding:0px 0px 0px 0px;*/
+      list-style:none;
+      overflow:auto;
+      margin:0 auto;
+    }
+    #menu ul li { display: inline; }
+    #menu ul li a {
+        padding: 20px 20px;
+        display: inline-block;
+        font: 14px sans-serif;
+        background-color:#006633;
+        color: white;
+        text-decoration: none;
+        /*border-bottom:1px solid #0085be;*/
+    }
+    .menu-login {
+      padding: 0px;
+    }
+    #menu ul li a:hover {
+      /*background-color:#55b3dc;*/
+      background-color:#1992b7;
+      color: white;
+      /*border-bottom:1px solid #006699;*/
+    }
+    #imagem {
+      float:right;
+      padding: 0px;
+      margin: 5px 50% 0px 0px;
+    }
+    /*barra de navegação*/
+  </style>
+
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- barra de navegação -->
+  <div id="barraMenu">
+  		<nav id="menu" class="menu">
+          <ul class="pages-menu">        
+            <li class="menu-themes"><a href="tabela.html" title="Usuários">Home</a></li>
+            <li class="menu-login"><a href="cadastro.html" title="Log In" id="cadastropol" class="login-link">Cadastro Policia</a></li>  
+            <li class="menu-login"><a href="cadastro_ocorrencia.html" title="Log In" class="login-link">Cadastro Ocorrencia</a></li>   
+            <li class="menu-login"><a href="login.html" title="Sair" style="float: right;" class="login-link">Sair</a></li>           
+            </ul>
+  		</nav>
+  </div>
+
+  <div id="login-box">
+    <div id="login-box-interno">
+      <div id="login-box-label">Cadastro de Ocorrência</div>
+
+      <div class="input-div">
+        <label>Tipo</label>
+        <input id="tipo"  value="tipo">
+      </div>
+	   <div class="input-div">
+        <label>Nome</label>
+        <input id="nome" value="nome">
+      </div>
+	   <div class="input-div">
+        <label>Local do Ocorrido</label>
+        <input id="local" value="local">
+      </div>
+      <div class="input-div">
+          <label>Numero de Vitimas</label>
+          <input id="nvitimas" type="number" value="0">
+        </div>
+	   <div class="input-div" id="input-matricula">
+        <label>Data</label>
+        <input type="datetime-local" id="data" value="matricula">
+      </div>
+	  	<div class="input-div" id="input-senha">
+        <label>Descriçaõ da Ocorrência</label>
+        <input id="descricao">
+      </div>
+      <div id="input-validar" style="margin-left: 30px">
+          Validar Ocorrência: <input  type="checkbox" id="valida">
+      </div>
+
+      <br/>
+      <div id="botoes">
+        <button id="botao">Cadastrar Nova Ocorrencia</button>        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    if(sessionStorage.getItem('admin') != "admin"){
+      console.log("remove");
+      $("#cadastropol").hide();
+      $("#input-validar").hide();
+    }
+});
+
+  var con = 'http://localhost:5000/'
+	$("#botao").click(function() {
+     
+      try{
+        $.ajax({
+        url: con + "cadastrarOco", 
+        type: "POST",
+        data: { 
+        tipo: $("#tipo").val(), 
+        nome: $("#nome").val(),
+        local: $("#local").val(), 
+        data: $("#data").val(),
+        descricao: $("#descricao").val(),
+        isValidada: $("#valida").is(":checked"),
+        nVitimas: $("#nvitimas").val()
+        },  
+        success: function(data) {
+           alert(data.msg);
+        },
+        statusCode: {
+          404: function() {
+           alert( "page not found" );
+        }}
+      });
+      }catch(ex){ 
+        alert("Error")
+      }
+   });     
+</script>

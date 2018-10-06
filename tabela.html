@@ -1,0 +1,276 @@
+<html>
+
+  <head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width">  
+  <title>Integração Sistemas</title>
+
+  <style>
+    body{      
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #login-box {
+      background-color:#547d54;
+      width:1080px;
+      height:550px;
+      margin:140px auto 0px;
+      border-radius:5px;
+      margin-top: 7%;
+    }
+    #login-box-interno {
+      width: 1080px;
+      height:550px;
+      background-color:white;
+      position:absolute;
+      margin:10px;
+      border-radius:5px;
+      box-shadow:0px 0px 5px black;
+      overflow:hidden;
+    }
+    #login-box-label {
+      height:45px;
+      text-align:center;
+      font:bold 14px/45px sans-serif;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      border-bottom:1px solid #bfc3c5;
+      box-shadow:1px 0px 3px black;
+      color:#555555;
+      text-shadow:1px 0px 1px white;
+    }
+    .input-div {
+      margin:20px;
+      padding:5px;
+      background-color:#f2f5f7;
+      border-radius:3px;
+    }
+    .input-div input {
+      width:302px;
+      height:35px;
+      padding-left:5px;
+      font:normal 13px sans-serif;
+      color:#aeaeae;
+      border-radius:3px;
+      border:1px solid #bfc4c6;
+      outline:none;
+    }
+    .input-div:hover {
+      background-color:#e0f1fc;
+    }
+    .input-div:hover input {
+      border-color:#7dc6dd;
+    }
+    #input-senha {
+      margin-top:-10px;
+    }
+    #botoes {
+      width:310px;
+      margin-left:25px;
+    }
+    #botao {
+      float:right;
+      background-color:#aeae;
+      padding:5px 15px;
+      font:bold 12px sans-serif;
+      border-radius:20px;
+      text-shadow:0px 1px white;
+      border:1px solid #9eb9c3;
+      color:#527988;
+      box-shadow:0px 0px 10px #c9c9c9;
+    }
+    #botao:hover {
+      background-color:#e0f1fc;
+      cursor:pointer;
+    }
+    #lembrar-senha {
+      font:normal 12px sans-serif;
+    }
+    #recupera-senha {
+      text-align:center;
+      font: 14px/45px sans-serif;
+      color:#669999;
+      /*text-shadow:1px 0px 1px white;*/
+    }
+    /*barra de navegação*/
+    #barraMenu {
+      background-color:#1992b7;
+      width:100%;
+      height:44px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0px;
+      filter:alpha(opacity=50);
+      opacity:0.6;
+      /*padding: -10px -10px 0px -10px;*/
+    }
+    #barraMenu:hover {
+      filter:alpha(opacity=100);
+      opacity:0.8;
+    }
+    #menu {
+       background-color:#006633;
+       padding: 0px;
+    }
+    #menu ul {
+      text-align:left;
+      /*padding:0px 0px 0px 0px;*/
+      list-style:none;
+      overflow:auto;
+      margin:0 auto;
+    }
+    #menu ul li { display: inline; }
+    #menu ul li a {
+        padding: 20px 20px;
+        display: inline-block;
+        font: 14px sans-serif;
+        background-color:#006633;
+        color: white;
+        text-decoration: none;
+        /*border-bottom:1px solid #0085be;*/
+    }
+    .menu-login {
+      padding: 0px;
+    }
+    #menu ul li a:hover {
+      /*background-color:#55b3dc;*/
+      background-color:#1992b7;
+      color: white;
+      /*border-bottom:1px solid #006699;*/
+    }
+    #imagem {
+      float:right;
+      padding: 0px;
+      margin: 5px 50% 0px 0px;
+    }
+    /*barra de navegação*/
+  </style>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+  crossorigin="anonymous">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+  crossorigin="anonymous"></script>
+  
+  </head>
+
+<body>
+  <!-- barra de navegação -->
+  <div id="barraMenu">
+  		<nav id="menu" class="menu">
+          <ul class="pages-menu">
+              <li class="menu-themes"><a href="tabela.html">Home</a></li>
+              <li class="menu-login"><a href="cadastro.html" id="cadastropol" title="Log In" class="login-link">Cadastro Policia</a></li>  
+              <li class="menu-login"><a href="cadastro_ocorrencia.html" title="Log In" class="login-link">Cadastro Ocorrencia</a></li>  
+              <li class="menu-login"><a href="login.html" title="Sair" style="float: right;" class="login-link">Sair</a></li>         
+           </ul>
+  		</nav>
+  </div>
+
+  <div id="login-box">
+        <div id="login-box-interno">
+
+  <h1> Tabela de ocorrrencias </h1>
+  <div id="lista-de-servicos">
+    <table id="ic" style="width:100%">
+        <tr>
+            <th>Nome</th>
+            <th>Local</th>
+            <th>Nome do Policial</th>
+            <th>Validada?</th>
+            <th>Descrição</th>
+            <th>Detalhes</th>
+        </tr>
+    </table>
+</div>
+</div> 
+</div>
+
+</body>
+</html> 
+
+<script>
+    $(document).ready(function() {
+      if(sessionStorage.getItem('admin') != "admin"){
+        console.log("remove");
+        $("#cadastropol").hide();
+      }
+    });
+
+    var con = 'http://localhost:5000/'
+    $( document ).ready(function() {
+        console.log("ready!");
+
+         try{
+            $.ajax({
+            url: con + "getAllOco", 
+            type: "GET",
+            success: function(data) {
+              var isAdmin = sessionStorage.getItem('admin');
+                for (i = 0; i < data.length; i++){ 
+                  if(isAdmin == "admin"){
+                    montatela(data,i);
+                  }else{
+                     if(data[i].isValidada == true){
+                      montatela(data,i);
+                     }
+                  }
+                }
+              }
+            })
+            
+                  
+      }catch(ex){ 
+        alert("Error")
+      }
+
+    });
+
+    function montatela(data,i){
+      $("body").append(
+"<div class='modal fade' id='" +  data[i]._id + "' role='dialog'>" +
+    "<div class='modal-dialog'>" +
+    
+      "<div class='modal-content'>" +
+        "<div class='modal-header'>" +
+          "<h4 class='modal-title'>Ocorrencia " + data[i].nome  +  "</h4>" +
+        "</div>" +
+        "<div class='modal-body'>" +
+          "<p> VITIMAS =" + data[i].nVitimas +"</p>" +
+          "<p> TIPO =" + data[i].tipo +"</p>" +
+          "<p> DATA =" + data[i].data +"</p>" +
+          "<p> local =" + data[i].local +"</p>" +
+          "<button type='button'>Validar!</button> </td>" +
+        "</div>"+
+        "<div class='modal-footer'>" +
+        
+        "</div>"
+      +"</div>"+
+      
+    +"</div>"+
+  "</div>")
+
+                  $("#ic").append(
+                    "<tr>"+
+                    "<td>" + data[i].nome + "</td>"+
+                    "<td>" + data[i].local + "</td>"+
+                    "<td>" + data[i].nomePol + "</td>"+
+                    "<td> Validada?  " + data[i].isValidada + "</td>"+
+                    "<td>" + data[i].descricao + "</td>" +
+                    "<td> <button type='button' data-toggle='modal' data-target='#" +  data[i]._id + "'>Detalhes!</button> </td>" +
+                    "</tr>");
+                }
+                
+           
+</script>
